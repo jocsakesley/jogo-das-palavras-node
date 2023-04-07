@@ -1,0 +1,12 @@
+<br>
+<div class="btn">
+    <button class="gerword-btn" (click)="getWord()">Escolher Palavra</button>
+    <button class="gerword-btn" (click)="clear()">Limpar Letras</button>
+    <button class="gerword-btn" (click)="showTip()">Mostrar Dica</button>
+</div>
+<div class="container">
+    <div class="display-letter" *ngFor="let lett of hidedWord.split(''); let i = index">{{lett}}</div>
+</div>
+<div class="container" *ngIf="tip">
+    <p>{{tip}}</p>
+</div>
